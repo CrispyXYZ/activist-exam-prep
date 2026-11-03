@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8f2626">
+  <meta name="description" content="党章、党史、时政理论题库。支持按重要程度加权抽题、单题练习、题组模拟、题库浏览与学习统计。">
+  <title>砺学题库 · 以练促学</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238f2626'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='%23f8efe0' font-family='serif'%3E学%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">跳到主要内容</a>
+
+  <div class="page-atmosphere" aria-hidden="true">
+    <span class="orb orb-one"></span>
+    <span class="orb orb-two"></span>
+    <span class="paper-line line-one"></span>
+    <span class="paper-line line-two"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" data-action="go-practice" aria-label="砺学题库首页">
+        <span class="brand-seal" aria-hidden="true">学</span>
+        <span class="brand-copy">
+          <strong>砺学题库</strong>
+          <small>以练促学 · 以学促行</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-item" type="button" data-view="practice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h9.5A2.5 2.5 0 0 1 17 7v13H7.5A2.5 2.5 0 0 1 5 17.5v-13Z"/><path d="M17 7h1.5A1.5 1.5 0 0 1 20 8.5v10a2 2 0 0 1-2 2h-1"/><path d="m8.5 9 1.4 1.4L12.5 7.8"/></svg>
+          <span>单题练习</span>
+        </button>
+        <button class="nav-item" type="button" data-view="group">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M4 10h16M8 14h3M8 17h6"/></svg>
+          <span>题组模拟</span>
+        </button>
+        <button class="nav-item" type="button" data-view="browse">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.3 15.3 4.2 4.2M8 8h5M8 11h4"/></svg>
+          <span>题库浏览</span>
+        </button>
+        <button class="nav-item" type="button" data-view="stats">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/><path d="M3 19h18"/></svg>
+          <span>学习统计</span>
+        </button>
+      </nav>
+
+      <div class="header-status" id="header-status" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main id="app" class="app-shell" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>砺学题库</strong> · 共 <span id="footer-total">—</span> 道题</p>
+      <p>所有作答记录仅保存在当前浏览器的本地存储中，不会上传。</p>
+    </div>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript-note">本页面需要启用 JavaScript 才能使用。</div>
+  </noscript>
+
+  <script src="data/questions.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
